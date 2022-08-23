@@ -8,5 +8,4 @@ import java.util.List;
 
 @Repository
 public interface PoMDeFamiliaRepository extends JpaRepository<PoMDeFamilia, Long> {
-    List<PoMDeFamilia> findByName(String nombre);
 }

@@ -14,9 +14,6 @@ public class PoMDeFamiliaServiceImpl implements PoMDeFamiliaService{
     @Autowired
     PoMDeFamiliaRepository poMDeFamiliaRepository;
 
-    @Autowired
-    PoMDeFamiliaRepository poMRepo;
-
     @Override
     public List<PoMDeFamilia> getAll() {
         return poMDeFamiliaRepository.findAll();
@@ -26,11 +23,6 @@ public class PoMDeFamiliaServiceImpl implements PoMDeFamiliaService{
     public Optional<PoMDeFamilia> findById(long id) {
         /*return poMDeFamiliaRepository.findById(id).map(record -> Optional.of(record)).orElse(Optional.empty());*/
         return poMDeFamiliaRepository.findById(id);
-    }
-
-    @Override
-    public List<PoMDeFamilia> findByName(String nombre) {
-        return poMRepo.findByName(nombre);
     }
 
     @Override

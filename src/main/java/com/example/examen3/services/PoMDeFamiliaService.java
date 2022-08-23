@@ -18,7 +18,6 @@ public interface PoMDeFamiliaService {
             " h.nombre FROM PadresDeFamilia as p inner join Hijos as h on p.padre_id = h.padre_id " +
             " where p.padre_id = :id", nativeQuery=true)
     public Optional<PoMDeFamilia> findById(long id);
-    public List<PoMDeFamilia> findByName(String name);
     public Optional<PoMDeFamilia> save(PoMDeFamilia poMDeFamilia);
     public Optional<PoMDeFamilia> update(PoMDeFamilia poMDeFamilia);
 
